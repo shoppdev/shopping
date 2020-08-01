@@ -8,7 +8,7 @@ class App extends React.Component {
   constructor(){
     super()
     this.state = {
-      listItem: '',
+      listItem: 'X.X',
       itemToAdd: 'X.X'
     }
   }
@@ -19,8 +19,7 @@ class App extends React.Component {
 
   //a step behind...
   addToList = () =>{ 
-    console.log(this.state.listItem)
-    this.setState({itemToAdd: this.state.listItem})
+    this.setState({itemToAdd: this.state.listItem}, () => console.log("adding: ", this.state.itemToAdd))
   }
 
 
@@ -30,7 +29,7 @@ class App extends React.Component {
         <h1>Item Request</h1>
         <AddBox addItem={this.addItem}/>
         <Submit addToList={this.addToList}/>
-        <List />
+        <List itemToAdd={this.state.itemToAdd}/>
       </div>
     )
   }
