@@ -8,7 +8,7 @@ class App extends React.Component {
   constructor(){
     super()
     this.state = {
-      listItem: 'X.X',
+      listItem: ["Thing1, Thing2"],
       itemToAdd: 'X.X'
     }
   }

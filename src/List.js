@@ -14,6 +14,10 @@ class List extends React.Component {
         
     }
 
+    createLineItem = () =>{
+        console.log("Createing line item")
+    }
+
     render(){
         return(
             <div>
